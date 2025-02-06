@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.video {
+    width: 100%;
+    border-bottom: 3rem solid #582A2A;
+    border-left: 1rem solid #582A2A;
+    border-right: 1rem solid #582A2A;
+    padding-top: 1rem;
+    background-color: #582A2A;  
+}
+.name {
+    font-size: 4vw;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+.work {
+    font-size: 1vw;
+    color: #ffffff;
+}
+.creative {
+    font-size: 2vw;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sec {
+    background-color: #320C0C;
+    position: relative;
+    padding: 0;
+}
+.nam{
+    font-family: 'Times New Roman', Times, serif;
+    opacity: 50%;
+}
+.snam{
+    font-family: 'Times New Roman', Times, serif;
+}
+.details{
+    font-family: 'Times New Roman', Times, serif;
+}
+.collab{
+    font-family: 'Times New Roman', Times, serif;
+}
+.jewel{
+    font-family: 'Times New Roman', Times, serif;
+    color: #320C0C;
+}
+@media (min-width:900px) {
+    .secimg{
+        left:5rem;
+        margin-top: -2rem;
+    }
+}
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-scroll {
+    display: flex;
+    animation: scroll 20s linear infinite; /* Adjust the duration as needed */
+    width: 300%; /* Ensure the container is wide enough to hold all images */
+  }
+  
+  .scroll-container {
+    overflow: hidden; /* Hide the overflow to create the scrolling effect */
+    width: 100%; /* Ensure the container takes the full width */
+  }
+  
+  .scroll-image {
+    flex-shrink: 0; /* Prevent images from shrinking */
+    width: 200%; /* Adjust the width of each image */
+  }
+  .story{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .mystory{
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+  }
+  .state{
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+  .contact{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    justify-content: space-evenly;
+  }
+  .underline{
+    text-decoration: none;
+  }

@@ -1,0 +1,31 @@
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-scroll {
+    display: flex;
+    animation: scroll 10s linear infinite; /* Adjust the duration as needed */
+    width: 125%; /* Ensure the container is wide enough to hold both text elements */
+  }
+  
+  .creative {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%; /* Ensure there is enough space between the two text elements */
+  }
+  @media (max-width: 640px) {
+    .work {
+      font-size: 1rem;
+    }
+    .name {
+      font-size: 2rem; 
+    }
+    .creative {
+      font-size: 1.25rem; 
+    }
+  }
