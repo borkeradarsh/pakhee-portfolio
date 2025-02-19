@@ -1,0 +1,57 @@
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1.5s ease-out forwards; /* Adjust duration to ensure the rectangle moves completely out of view */
+  animation-delay: 0.5s;
+}
+
+.carousel {
+  width: 150%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  width: 120%;
+  display: flex;
+  gap: 3%;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%; /* Fixed width for consistent movement */
+  flex-shrink: 0;
+  animation: moveLeft 15s linear infinite;
+}
+
+/* Add different delay for each image */
+.carousel-image:nth-child(1) { animation-delay: 0s; }
+.carousel-image:nth-child(2) { animation-delay: 0s; }
+
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Performance optimizations */
+.carousel-track {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.carousel-track:hover .carousel-image {
+  animation-play-state: paused;
+} 
